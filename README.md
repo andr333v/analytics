@@ -21,7 +21,7 @@ When activate() is invoked two calls to WeatherService are performed. After both
 #how to start
 To start the project double click on the .sln file. When everything is loaded in Visual Studio compile the solution and run it. Then navigate to http://localhost:{portNumber}/durandal.
 
-
+#additional info
 Some information regarding the task implementation:
 - The design is not responsive. I've used bootstrap to style the UI but my CSS skills are very limited.
 - For some cities history weather info is not available. When this happens, instead of a chart a message appears saying there is no data. I don't know if the data is really missing or I could not figure a way out of retrieving it.

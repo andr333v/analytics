@@ -1,0 +1,7 @@
+﻿<h1 style="text-align: center" data-bind="text: Message"></h1>
+
+<div style="width:600px; height:400px" data-bind="kendoChart: forecastChartViewModel"> </div>
+
+<div style="width:600px; height:400px" data-bind="kendoChart: historyChartViewModel, visible: hasHistory"> </div>
+
+<h1 style="text-align: center" data-bind="text: noHistoryDataMessage, visible: !hasHistory"></h1>

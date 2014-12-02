@@ -1,0 +1,62 @@
+﻿<div>
+    <h1 style="text-align: center" data-bind="text: message" style="margin-left: 6px"></h1>
+
+    <div data-bind="foreach: cityViewModels" class="row">
+        <div class="col-md-3 panel panel-default" style="margin-left: 20px; padding: 0px; cursor: pointer"
+            data-bind="click: $parent.goToDetails">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title pull-left" data-bind="text: getFullName()"></h3>
+            </div>
+
+            <div class="list-group">
+                <div class="list-group-item" style="padding-right: 0px; padding-bottom: 0px; padding-top: 5px;">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label class="list-group-item-heading" style="font-size: 12px; color: blue; cursor: pointer">Date & Time</label>
+                            <h4 data-bind="text: city.dateTimeStr" style="margin: 0; margin-bottom: 5px" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item" style="padding-right: 0px; padding-bottom: 0px; padding-top: 5px;">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label class="list-group-item-heading" style="font-size: 12px; color: blue; cursor: pointer">Address</label>
+                            <h4 data-bind="text: city.address" style="margin: 0; margin-bottom: 5px; font-size: 15px" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item" style="padding-right: 0px; padding-bottom: 0px; padding-top: 5px;">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label class="list-group-item-heading" style="font-size: 12px; color: blue; cursor: pointer">Weather</label>
+                            <h4 data-bind="text: getWeatherInfo()" style="margin: 0; font-size: 16px" />
+                        </div>
+                        <div class="col-md-3">
+                            <img data-bind="attr: { src: getWeatherImageUrl() }" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item" style="padding-right: 0px; padding-bottom: 0px; padding-top: 5px;">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label class="list-group-item-heading" style="font-size: 12px; color: blue; cursor: pointer">Pressure</label>
+                            <h4 data-bind="text: getPressure()" style="margin: 0; margin-bottom: 5px" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item" style="padding-right: 0px; padding-bottom: 0px; padding-top: 5px;">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label class="list-group-item-heading" style="font-size: 12px; color: blue; cursor: pointer">Humidity</label>
+                            <h4 data-bind="text: getHumidity()" style="margin: 0; margin-bottom: 5px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

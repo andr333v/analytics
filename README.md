@@ -18,12 +18,13 @@ When activate() is called cityViewModels collection is filled using the WeatherS
 #analyticsdetails
 When activate() is invoked two calls to WeatherService are performed. After both of them are returned KendoChartViewModelFactory.CreateKendoChartViewModel is called to create the two necessary viewmodels - one for the forecast and one for the history weather info data. Those two viewmodels are passed to the UI (kendo chart) so the information can be displayed.
 
+#how to start
 To start the project double click on the .sln file. When everything is loaded in Visual Studio compile the solution and run it. Then navigate to http://localhost:{portNumber}/durandal.
 
 
 Some information regarding the task implementation:
-1) The design is not responsive. I've used bootstrap to style the UI but my CSS skills are very limited.
-2) For some cities history weather info is not available. When this happens, instead of a chart a message appears saying there is no data. I don't know if the data is really missing or I could not figure a way out of retrieving it.
-3) I tried different services for retrieving the local time in every Telerik office. Unfortunately most of these services have a call limit and I could not use them. Others were not as accurate as I wanted them to be. I fell back to hardcoding the different offsets every city has compared to the UTC time. I have not tested this approach with daylight saving though.
-4) Initially kendo.all.min is loaded. This can be optimized to load only the js files necessary for the kendo chart to function. Unfotunately I thought of that at the very end.
-5) I've left system.debug(true) on so everything is logged.
+- The design is not responsive. I've used bootstrap to style the UI but my CSS skills are very limited.
+- For some cities history weather info is not available. When this happens, instead of a chart a message appears saying there is no data. I don't know if the data is really missing or I could not figure a way out of retrieving it.
+- I tried different services for retrieving the local time in every Telerik office. Unfortunately most of these services have a call limit and I could not use them. Others were not as accurate as I wanted them to be. I fell back to hardcoding the different offsets every city has compared to the UTC time. I have not tested this approach with daylight saving though.
+- Initially kendo.all.min is loaded. This can be optimized to load only the js files necessary for the kendo chart to function. Unfotunately I thought of that at the very end.
+- I've left system.debug(true) on so everything is logged.

@@ -11,15 +11,15 @@ define(["require", "exports", 'plugins/router', 'knockout', 'models/City', 'VMs/
     exports.message = "Analytics";
     exports.cityViewModels = ko.observableArray([]);
     exports.cityIds = [
-        Utils.Constants.CopenhagenCityId,
         Utils.Constants.SofiaCityId,
         Utils.Constants.LondonCityId,
         Utils.Constants.PaloAltoCityId,
         Utils.Constants.BostonCityId,
-        Utils.Constants.SydneyCityId,
+        Utils.Constants.MunichCityId,
         Utils.Constants.AustinCityId,
-        Utils.Constants.GurgaonCityId,
-        Utils.Constants.MunichCityId];
+        Utils.Constants.CopenhagenCityId,
+        Utils.Constants.SydneyCityId,
+        Utils.Constants.GurgaonCityId];
 
     function activate() {
         if (this.cityViewModels() && this.cityViewModels().length > 0) {

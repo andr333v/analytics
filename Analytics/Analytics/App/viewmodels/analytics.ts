@@ -22,15 +22,15 @@ import CityViewModel = CityViewModelImport.CityViewModel;
 export var message = "Analytics";
 export var cityViewModels: KnockoutObservableArray<CityViewModel> = ko.observableArray([]);
 export var cityIds: number[] = [
-    Utils.Constants.CopenhagenCityId,
     Utils.Constants.SofiaCityId,
     Utils.Constants.LondonCityId,
     Utils.Constants.PaloAltoCityId,
     Utils.Constants.BostonCityId,
-    Utils.Constants.SydneyCityId,
+    Utils.Constants.MunichCityId,
     Utils.Constants.AustinCityId,
-    Utils.Constants.GurgaonCityId,
-    Utils.Constants.MunichCityId];
+    Utils.Constants.CopenhagenCityId,
+    Utils.Constants.SydneyCityId,
+    Utils.Constants.GurgaonCityId];
 
 export function activate() {
     if (this.cityViewModels() && this.cityViewModels().length > 0) {
